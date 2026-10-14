@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640" role="img" aria-labelledby="heroArtTitle">
+  <title id="heroArtTitle">Abstract geometric composition in emerald, mint and blue</title>
+
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.5" r="2.5" fill="#0A7F52" opacity="0.22"/>
+    </pattern>
+    <linearGradient id="blobGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#A7E3C4"/>
+      <stop offset="1" stop-color="#0A7F52"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3FAF6"/>
+      <stop offset="1" stop-color="#EAF3FF"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#063D2B" flood-opacity="0.16"/>
+    </filter>
+    <filter id="chip" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#063D2B" flood-opacity="0.18"/>
+    </filter>
+    <clipPath id="panelClip">
+      <rect x="40" y="40" width="560" height="560" rx="52"/>
+    </clipPath>
+  </defs>
+
+  <!-- Panel -->
+  <g filter="url(#soft)">
+    <rect x="40" y="40" width="560" height="560" rx="52" fill="url(#panelGrad)"/>
+  </g>
+
+  <g clip-path="url(#panelClip)">
+    <!-- dot grid, top right -->
+    <rect x="356" y="66" width="214" height="150" fill="url(#dots)"/>
+
+    <!-- soft emerald blob -->
+    <circle cx="430" cy="360" r="112" fill="#0A7F52" opacity="0.10"/>
+
+    <!-- concentric rings -->
+    <circle cx="286" cy="268" r="150" fill="none" stroke="#A7E3C4" stroke-width="20"/>
+    <circle cx="286" cy="268" r="150" fill="none" stroke="#0A7F52" stroke-width="1.5" opacity="0.5"/>
+    <circle cx="286" cy="268" r="96" fill="none" stroke="#0A7F52" stroke-width="2.5" stroke-dasharray="4 10" opacity="0.7"/>
+
+    <!-- mint arc fragment -->
+    <path d="M120 268 A166 166 0 0 1 286 102" fill="none" stroke="#1E6FE8" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+
+    <!-- overlapping mint circle -->
+    <circle cx="214" cy="188" r="62" fill="url(#blobGrad)" opacity="0.95"/>
+
+    <!-- deep rounded square, rotated -->
+    <rect x="112" y="392" width="104" height="104" rx="28" fill="#063D2B" transform="rotate(24 164 444)"/>
+
+    <!-- node / line graph (engineering) -->
+    <g stroke="#0A7F52" stroke-width="3" fill="none" opacity="0.9" stroke-linecap="round">
+      <path d="M118 430 L246 372 L372 430 L500 330"/>
+    </g>
+    <g fill="#FFFFFF" stroke="#0A7F52" stroke-width="3">
+      <circle cx="118" cy="430" r="9"/>
+      <circle cx="246" cy="372" r="9"/>
+      <circle cx="372" cy="430" r="9"/>
+    </g>
+    <circle cx="500" cy="330" r="12" fill="#0A7F52"/>
+
+    <!-- floating product card -->
+    <g filter="url(#chip)">
+      <rect x="392" y="404" width="184" height="140" rx="24" fill="#FFFFFF"/>
+    </g>
+    <rect x="416" y="470" width="18" height="46" rx="6" fill="#0A7F52"/>
+    <rect x="444" y="446" width="18" height="70" rx="6" fill="#A7E3C4"/>
+    <rect x="472" y="492" width="18" height="24" rx="6" fill="#1E6FE8"/>
+    <rect x="500" y="458" width="18" height="58" rx="6" fill="#F5B83D"/>
+    <rect x="416" y="428" width="72" height="9" rx="4.5" fill="#0D2B20" opacity="0.85"/>
+    <rect x="416" y="444" width="44" height="7" rx="3.5" fill="#5A6F66" opacity="0.6"/>
+
+    <!-- amber accent dot -->
+    <circle cx="520" cy="180" r="9" fill="#F5B83D"/>
+    <circle cx="520" cy="180" r="20" fill="none" stroke="#F5B83D" stroke-width="2" opacity="0.5"/>
+  </g>
+</svg>

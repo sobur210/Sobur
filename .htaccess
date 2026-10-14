@@ -1,0 +1,25 @@
+# Sobur — project root config.
+# Use this when the hosting document root points at the project root (e.g. cPanel),
+# so this file forwards everything into /public and protects the private folders.
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Block private folders outright.
+    RewriteRule ^(config|database|includes|logs|docker)(/|$) - [F,L]
+
+    # Already inside /public — let it through.
+    RewriteRule ^public/ - [L]
+
+    # Admin area is served from the project root.
+    RewriteRule ^admin(/|$) - [L]
+
+    # Everything else is served from /public.
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# On shared hosts where the docroot cannot be changed, the /public .htaccess
+# still applies its own security headers once the request is rewritten.

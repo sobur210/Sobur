@@ -1,0 +1,16 @@
+# Local configuration (never commit credentials)
+/config/config.php
+
+# Logs
+/logs/*.log
+/logs/*.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Local overrides
+/config/config.local.php

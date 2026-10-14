@@ -1,6 +1,2 @@
 User-agent: *
-Allow: /
-Disallow: /admin/
-
-# TODO: update this URL to your production domain.
-Sitemap: http://localhost:8000/sitemap.xml
+Disallow:
